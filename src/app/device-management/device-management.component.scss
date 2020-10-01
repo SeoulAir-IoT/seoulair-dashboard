@@ -1,0 +1,37 @@
+%device-inputs{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+.device-management-component{
+    display: flex;
+    flex-direction: column;
+}
+
+.device-type-input{
+    @extend %device-inputs;
+}
+
+.time-trashold-input{
+    @extend %device-inputs;
+}
+
+.device-switch-container{
+    padding:5px;
+    
+}
+
+mat-lable{
+    padding-right: 3px;
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #0fa337; /*replace with your color*/
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #77e093;  /*replace with your color*/
+}
