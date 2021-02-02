@@ -1,4 +1,4 @@
-/* %device-inputs{
+ %device-inputs{
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -9,8 +9,9 @@
 .device-management-component{
     display: flex;
     flex-direction: column;
+    height:500px;
 }
-
+/*
 .device-type-input{
     @extend %device-inputs;
 }
@@ -27,13 +28,13 @@
 mat-lable{
     padding-right: 3px;
 }
+*/
 
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-    background-color: #0fa337; /*replace with your color
+    background-color: #0fa337; 
 }
 
 ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
-    background-color: #77e093;  /*replace with your color
+    background-color: #77e093;  
 }
 
-*/
