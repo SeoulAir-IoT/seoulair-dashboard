@@ -1,8 +1,8 @@
 <div class = "device-management-component">
 
-    <device-info>
+    <device-info [btnRefreshClickedSignal]="eventSubject.asObservable()">
     </device-info>
-    <device-stations>
+    <device-stations (btnRefreshClicked)="eventSubject.next()">
     </device-stations>
     
 </div>

@@ -7,25 +7,28 @@
     <label>Choose station</label>
     <mat-form-field appearance="fill">
         <mat-label>Station code</mat-label>
-        <mat-select (selectionChange)="setSignalLightToggle($event)">
+        <mat-select (selectionChange)="setStationData($event)">
             <mat-option *ngFor="let station of _stations" [value]="station">
                 {{station}}
             </mat-option>
         </mat-select>
     </mat-form-field>
 
-    <div class="station-info">
-        <div class="station-switch-name">
-            <mat-label>Station Switch</mat-label>
-            <mat-slide-toggle class="station-switch-slider"></mat-slide-toggle>
+    <div [hidden]='!_stationChoosen'>
+        <div class="station-info">
+            <div class="station-switch-name">
+                <mat-label>Station Switch</mat-label>
+                <mat-slide-toggle class="station-switch-slider" [checked]="_isStationOn"
+                (change)="onStationToggleChange($event)"></mat-slide-toggle>
+            </div>
+        </div>
+
+        <! -- TODO: Change how label gets value also add Id for Click-choosen-station -->
+        <div class="station-color">
+            <label>Station color: </label>
+            <label>{{_stationColor}}</label>
         </div>
     </div>
-
-    <! -- TODO: Change how label gets value also add Id for Click-choosen-station -->
-    <div class="station-color">
-        <label>Station color: </label>
-        <label>{{_defaultColor}}</label>
-    </div>
-
-    <button mat-raised-button id="station-btn-refresh">Refresh</button>
+    
+    <button mat-raised-button id="station-btn-refresh" (click)="onDeviceRefreshBtnClick()">Refresh</button>
 </div>

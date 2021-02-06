@@ -9,8 +9,11 @@
 .device-management-component{
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
     height:500px;
 }
+
+
 /*
 .device-type-input{
     @extend %device-inputs;

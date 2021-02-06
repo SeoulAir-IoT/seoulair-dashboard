@@ -15,11 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 
-import {StationInfoComponent} from './station-info/station-info.component';
 import { DeviceManagementComponent } from './device-management/device-management.component';
 import { DeviceInfoComponent } from "./device-info/device-info.component";
-import { NotificationsTableComponent } from './notifications-table/notifications-table.component';
 import { DeviceStationsComponent } from './device-stations/device-stations.component';
+import { DataManagementComponent } from './data-management/data-management.component';
 
 import {HttpClientModule} from "@angular/common/http";
 
@@ -29,8 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
     DeviceManagementComponent,
     DeviceInfoComponent,
     DeviceStationsComponent,
-    StationInfoComponent,
-    NotificationsTableComponent
+    DataManagementComponent
   ],
   imports: [
     BrowserModule,
