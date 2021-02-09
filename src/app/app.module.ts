@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { DeviceManagementComponent } from './device-management/device-management.component';
 import { DeviceInfoComponent } from "./device-info/device-info.component";
@@ -43,6 +44,7 @@ import {HttpClientModule} from "@angular/common/http";
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
+    MatRadioModule,
     FormsModule
   ],
   providers: [],

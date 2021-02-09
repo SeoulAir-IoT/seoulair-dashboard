@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
     styleUrls:['data-management.component.scss'],
 })
 export class DataManagementComponent{
+    public _orders:string[]=[];
+    public _options:string[]=[];
+
 
     public constructor(){
         

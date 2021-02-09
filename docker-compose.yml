@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+    seoulair-dashboard:
+        container_name: seoulair-dashboard
+        image: seoulair-dashboard
+        restart: always
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        network_mode: bridge
+        ports:
+            - 6000:80
+        external_links:
+            - seoulair-gateway
