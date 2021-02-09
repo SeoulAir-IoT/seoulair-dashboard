@@ -10,6 +10,6 @@ services:
             dockerfile: Dockerfile
         network_mode: bridge
         ports:
-            - 6000:80
+            - 8080:80
         external_links:
             - seoulair-gateway
