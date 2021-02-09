@@ -1,0 +1,33 @@
+<div class="device-stations-component">
+    <div class="signal-light-name">
+        <label>Signal light name: </label>
+        <label>{{_signalLightName}}</label>
+    </div>
+
+    <label>Choose station</label>
+    <mat-form-field appearance="fill">
+        <mat-label>Station code</mat-label>
+        <mat-select (selectionChange)="setStationData($event)">
+            <mat-option *ngFor="let station of _stations" [value]="station">
+                {{station}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div [hidden]='!_stationChoosen'>
+        <div class="station-info">
+            <div class="station-switch-name">
+                <mat-label>Station Switch</mat-label>
+                <mat-slide-toggle class="station-switch-slider" [checked]="_isStationOn"
+                (change)="onStationToggleChange($event)"></mat-slide-toggle>
+            </div>
+        </div>
+
+        <div class="station-color">
+            <label>Station color: </label>
+            <label>{{_stationColor}}</label>
+        </div>
+    </div>
+    
+    <button mat-raised-button id="station-btn-refresh" (click)="onDeviceRefreshBtnClick()">Refresh</button>
+</div>

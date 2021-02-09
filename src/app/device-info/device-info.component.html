@@ -1,0 +1,25 @@
+<div class="device-info-component">
+    <h1>Device Microservice</h1>
+    <div class = "device-switch-container">
+        <mat-label>Device Switch </mat-label>
+        <mat-slide-toggle class = "device-switch-slider" [checked]="_isSensorOn" 
+        (change)="onDeviceToggleChange($event)"></mat-slide-toggle>
+    </div>
+
+    <div>
+        <mat-form-field class = "device-sensor-name">
+            <mat-label>Name of the device</mat-label>
+            <input matInput placeholder = "Name" type = "text" [(ngModel)]="_deviceInputName"/>
+        </mat-form-field>
+        <button mat-raised-button id="device-btn-name" (click)="onDeviceNameBtnChange()">Submit</button>
+    </div>
+
+    <div>
+        <mat-form-field class = "device-sensor-delay">
+            <mat-label>Sending time</mat-label>
+            <input matInput placeholder = "Time in miliseconds" type="number" min="1000" [(ngModel)]="_inputDelayMs"/>
+        </mat-form-field>
+        <button mat-raised-button id="device-btn-delay" (click)="onDeviceDelayBtnChange()">Submit</button>
+    </div>
+
+</div>

@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DataManagementComponent } from './data-management/data-management.component';
 import { DeviceManagementComponent } from './device-management/device-management.component';
-import { StationInfoComponent } from './station-info/station-info.component';
-import { NotificationsTableComponent } from './notifications-table/notifications-table.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/device', pathMatch: 'full' },
   { path: 'device', component: DeviceManagementComponent },
-  { path: 'station-info', component: StationInfoComponent },
-  { path: 'notifications-table', component: NotificationsTableComponent }
+  { path: 'data', component: DataManagementComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,14 @@
+%device-stations{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+    height: max-content;
+}
+
+.device-stations-component{
+    display: flex;
+    flex-direction: column;
+    height:300px;
+}

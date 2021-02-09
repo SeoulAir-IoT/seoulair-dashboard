@@ -1,0 +1,71 @@
+<div class="data-management-component">
+    <h1>Data Microservice</h1>
+    <div class="data-switch-container">
+        <mat-label>Data Switch</mat-label>
+        <mat-slide-toggle class="data-switch-slider"></mat-slide-toggle>
+    </div>
+
+    <label>Retrieve data</label>
+    <mat-form-field appearance="fill">
+        <mat-label>Get by</mat-label>
+        <select matNativeControl required>
+            <option value="page">page</option>
+            <option value="id">id</option> 
+        </select>
+    </mat-form-field>
+
+    <div>
+        <mat-form-field class="data-getby-id-input">
+            <input matInput placeholder="Enter id">
+        </mat-form-field>
+    </div>
+
+    <div>
+        Page parameters:
+        <div class="data-page-parameters">
+            <mat-form-field class="data-page-index">
+                <input matInput placeholder="Enter page index">
+            </mat-form-field>
+
+            <mat-form-field class="data-page-size">
+                <input matInput placeholder="Enter page size">
+            </mat-form-field>
+
+            <!--- order By-->
+            <mat-form-field appearance="fill">
+                <mat-label>Order by</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let order of _orders" [value]="order">
+                    {{order}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-radio-group aria-label="Select asention option">
+                <mat-radio-button value="true">Descending</mat-radio-button>
+                <mat-radio-button value="false">Asending</mat-radio-button>
+            </mat-radio-group>
+
+            <!--- filter By-->
+            <mat-form-field appearance="fill">
+                <mat-label>Order by</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let option of _options" [value]="option">
+                    {{option}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="data-filter-value">
+                <input matInput placeholder="Enter filter value">
+            </mat-form-field>
+
+            <mat-radio-group aria-label="Select filter type">
+                <mat-radio-button value="Equal">Equal</mat-radio-button>
+                <mat-radio-button value="LessThan">Less than</mat-radio-button>
+                <mat-radio-button value="GreaterThan">GreaterThan</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+
+</div>
